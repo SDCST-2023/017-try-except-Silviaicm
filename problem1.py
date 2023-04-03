@@ -35,3 +35,13 @@ os.system('cls')
 
 print("Enter in the coefficients for a quadratic equation in the format:")
 print("  ax^2 + bx + c = 0")
+a=input("Enter a value for a: ")
+b=input("Enter a value for b: ")
+c=input("Enter a value for c: ")
+list[a,b,c]
+while i==str(i):
+
+
+d=(b**2)-(4*a*c)  
+sol1 = (-b-math.sqrt(d))/(2*a)  
+sol2 = (-b+math.sqrt(d))/(2*a)  
