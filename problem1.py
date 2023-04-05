@@ -32,16 +32,24 @@ The roots are -4.0 and -4.0
 import os
 os.system('cls')
 
-
-print("Enter in the coefficients for a quadratic equation in the format:")
-print("  ax^2 + bx + c = 0")
-a=input("Enter a value for a: ")
-b=input("Enter a value for b: ")
-c=input("Enter a value for c: ")
-list[a,b,c]
-while i==str(i):
-
-
-d=(b**2)-(4*a*c)  
-sol1 = (-b-math.sqrt(d))/(2*a)  
-sol2 = (-b+math.sqrt(d))/(2*a)  
+import math
+while True:
+    try:
+        a=input("Enter in a number a: ")
+        b=input("Enter in a number b: ")
+        c=input("Enter in a number c: ")
+        print(f"  {a}x^2 + {b}x + {c} = 0")
+        a=int(a)
+        b=int(b)
+        c=int(c)
+        d=((-1*b)+math.sqrt(math.pow(b,2)-(4*(a)*(c))))/(2*a)
+        e=((-1*b)-math.sqrt(math.pow(b,2)-(4*(a)*(c))))/(2*a)
+        d=round(d,2)
+        e=round(e,2)
+        print(f"The roots are {d} is {e}")
+        break
+    except Exception as err:
+        if a==str(a) or b==str(b) or c==str(c):
+            print(f"Those are not valid values for {a},{b} or {c}")
+        else:
+            print("There are no real roots to the equation")
